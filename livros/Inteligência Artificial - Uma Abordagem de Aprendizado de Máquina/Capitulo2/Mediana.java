@@ -4,9 +4,7 @@ import java.util.Collections;
 
 public class Mediana {
     public static Double mediana(ArrayList<Double> numbers) {
-        System.out.println(numbers);
         Collections.sort(numbers);
-        System.out.println(numbers);
         int size = numbers.size();
         int pivot = (int) Math.floor(size / 2);
         if (size % 2 == 0) {

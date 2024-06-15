@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
-public class Percentil {
+public class Percentil { // a corrigir
     public static Double percentil(ArrayList<Double> numbers, Double percentil) {
         Collections.sort(numbers);
         System.out.println(numbers);
@@ -14,8 +14,6 @@ public class Percentil {
             return (numbers.get(np.intValue() - 1) + numbers.get(np.intValue())) / 2;
         } else {
             int position = (int) Math.floor(np);
-            System.out.println("Position");
-            System.out.println(position);
             return numbers.get(position);
         }
     }
