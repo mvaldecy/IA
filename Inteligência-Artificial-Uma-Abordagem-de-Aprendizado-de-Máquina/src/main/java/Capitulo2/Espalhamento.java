@@ -1,3 +1,7 @@
+package Capitulo2;
+
+
+
 /*
  * As medidas de espalhamento medem a dispersão ou espalhamento de um conjunto de valores.
  * Assim, elas permitem observar se os valores estão amplamente espalhados ou relativamente
@@ -7,7 +11,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
-import java.util.stream.Collectors;
+
 
 public class Espalhamento {
 
