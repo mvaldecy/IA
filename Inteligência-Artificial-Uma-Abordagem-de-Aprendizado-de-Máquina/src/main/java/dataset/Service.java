@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
@@ -68,5 +69,11 @@ public class Service {
         ArrayList<Employee> employees = Service.getData();
         ArrayList<Double> employeesSalary = new ArrayList<>(Arrays.asList(employees.stream().map((i) -> i.getSalary()).toArray(Double[]::new)));
         return employeesSalary;
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Employee> employees = getData();
+        Collections.sort(employees, (i, j) -> i.getSalary().compareTo(j.getSalary()));
+        System.out.println(employees.get(16533).salaryInUSD);
     }
 }

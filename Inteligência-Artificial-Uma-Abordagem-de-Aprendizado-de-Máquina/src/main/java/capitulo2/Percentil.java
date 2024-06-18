@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 
+import dataset.Service;
+
 public class Percentil { // a corrigir
     public static Double percentil(ArrayList<Double> numbers, Double percentil) {
         Collections.sort(numbers);
@@ -18,12 +20,9 @@ public class Percentil { // a corrigir
     }
 
     public static void main(String[] args) {
-        ArrayList<Double> odd = new ArrayList<Double>(Arrays.asList(17.0, 4.0, 21.0, 8.0, 4.0));
-        ArrayList<Double> even = new ArrayList<Double>(Arrays.asList(17.0, 4.0, 8.0, 21.0, 4.0, 15.0, 13.0, 9.0));
-        System.out.println("np não inteiro.");
-        System.out.println(percentil(even, 0.73));
-        System.out.println("np inteiro.");
-        System.out.println(percentil(odd, 0.2));
+        ArrayList<Double> salaries = Service.getSalaries();
+        System.out.println(percentil(salaries, 0.73));
+        System.out.println(percentil(salaries, 0.2));
 
     }
 }

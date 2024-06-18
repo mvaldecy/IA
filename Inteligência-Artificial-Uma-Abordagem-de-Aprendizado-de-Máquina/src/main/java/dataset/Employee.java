@@ -40,7 +40,11 @@ public class Employee {
     }
 
     public Double getSalary() {
-        return this.salary;
+        return this.salaryInUSD;
+    }
+
+    public void printInfo() {
+        System.out.printf("Work Year: %d", this.workYear);
     }
     
 }
