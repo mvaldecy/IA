@@ -46,7 +46,8 @@ public class Espalhamento {
         return soma / (size - 1);
     }
     
-    public static Double desvioPadrao(Double variancia) {
+    public static Double desvioPadrao(ArrayList<Double> numbers) {
+        Double variancia = variancia(numbers);
         Double dp = Math.sqrt(variancia);
         return dp;
     }
@@ -82,7 +83,7 @@ public class Espalhamento {
 
         Double intervalo = intervalo(numbers);
         Double variancia = variancia(numbers);
-        Double desvioPadrao = desvioPadrao(variancia);
+        Double desvioPadrao = desvioPadrao(numbers);
         Double desvioMedioAbsoluto = desvioMedioAbs(numbers);
         Double desvioMedianoAbsoluto = desvioMedianoAbs(numbers);
         Double intervaloInterquartil = intervaloInterquartil(numbers);

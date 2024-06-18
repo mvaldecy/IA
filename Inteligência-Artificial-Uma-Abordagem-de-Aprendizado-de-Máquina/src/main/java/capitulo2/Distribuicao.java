@@ -7,6 +7,7 @@ import dataset.Employee;
 import dataset.Service;
 
 public class Distribuicao {
+    
 
     public static Double obliquidade() {
         ArrayList<Double> salaries = Service.getSalaries();
