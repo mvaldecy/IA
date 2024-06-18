@@ -38,5 +38,9 @@ public class Employee {
         this.companyLocation = companyLocation;
         this.companySize = companySize;
     }
+
+    public Double getSalary() {
+        return this.salary;
+    }
     
 }

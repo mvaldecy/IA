@@ -5,6 +5,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Optional;
 
+import dataset.Employee;
+import dataset.Service;
+
 class Media {
 
     public static Double media(ArrayList<Double> numbers) {
@@ -22,8 +25,10 @@ class Media {
     }
 
     public static void main(String[] args) {
-        ArrayList<Double> numbers = new ArrayList<Double>(Arrays.asList(1.0, 5.7, 7.9, 8.1, 4.7, 5.0));
-        Double result = media(numbers);
+        // ArrayList<Double> numbers = new ArrayList<Double>(Arrays.asList(1.0, 5.7, 7.9, 8.1, 4.7, 5.0));
+        ArrayList<Employee> employees = Service.getData();
+        ArrayList<Double> employeesSalary = new ArrayList<>(Arrays.asList(employees.stream().map((i) -> i.getSalary()).toArray(Double[]::new)));
+        Double result = media(employeesSalary);
         System.out.println(result);
     }
 }
