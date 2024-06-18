@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
+import dataset.Service;
+
 
 public class Espalhamento {
 
@@ -23,6 +25,8 @@ public class Espalhamento {
     public static Double intervalo(ArrayList<Double> numbers) {
         Double max = Collections.max(numbers);
         Double min = Collections.min(numbers);
+        System.out.println(max);
+        System.out.println(min);
         return max - min;
     }
 
@@ -74,16 +78,8 @@ public class Espalhamento {
     }
     
     public static void main(String[] args) {
-        int q;
-        ArrayList<Double> numbers = new ArrayList<Double>();
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Insira a quantidade de dados:");
-        q = scanner.nextInt();
-        for(int i = 0; i < q; i ++) {
-            System.out.println("Insira o dado " + (i + 1));
-            numbers.add(scanner.nextDouble());
-        }
-        scanner.close();
+        ArrayList<Double> numbers = Service.getSalaries();
+
         Double intervalo = intervalo(numbers);
         Double variancia = variancia(numbers);
         Double desvioPadrao = desvioPadrao(variancia);

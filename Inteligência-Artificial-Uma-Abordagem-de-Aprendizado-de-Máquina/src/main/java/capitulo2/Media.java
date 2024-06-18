@@ -26,8 +26,7 @@ class Media {
 
     public static void main(String[] args) {
         // ArrayList<Double> numbers = new ArrayList<Double>(Arrays.asList(1.0, 5.7, 7.9, 8.1, 4.7, 5.0));
-        ArrayList<Employee> employees = Service.getData();
-        ArrayList<Double> employeesSalary = new ArrayList<>(Arrays.asList(employees.stream().map((i) -> i.getSalary()).toArray(Double[]::new)));
+        ArrayList<Double> employeesSalary = Service.getSalaries();
         Double result = media(employeesSalary);
         System.out.println(result);
     }

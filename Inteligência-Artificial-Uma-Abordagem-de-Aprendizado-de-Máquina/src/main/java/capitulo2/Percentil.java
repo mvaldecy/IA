@@ -7,11 +7,8 @@ import java.util.Collections;
 public class Percentil { // a corrigir
     public static Double percentil(ArrayList<Double> numbers, Double percentil) {
         Collections.sort(numbers);
-        System.out.println(numbers);
         int size = numbers.size();
         Double np = size * percentil;
-        System.out.println("np");
-        System.out.println(np);
         if ((np * 100) % 100 == 0) { // checa se np é inteiro.
             return (numbers.get(np.intValue() - 1) + numbers.get(np.intValue())) / 2;
         } else {
