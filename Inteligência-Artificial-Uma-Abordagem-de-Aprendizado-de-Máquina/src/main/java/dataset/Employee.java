@@ -11,6 +11,7 @@ public class Employee {
     public String emplyeeResidence;
     public Double remoteRatio;
     public String companyLocation;
+    public String companySize;
 
     public Employee(
         int workYear,
@@ -22,7 +23,8 @@ public class Employee {
         Double salaryInUSD,
         String employeeResidence,
         Double remoteRatio,
-        String companyLocation
+        String companyLocation,
+        String companySize
     ) {
         this.workYear = workYear;
         this.experienceLevel = experienceLevel;
@@ -34,6 +36,7 @@ public class Employee {
         this.emplyeeResidence = employeeResidence;
         this.remoteRatio = remoteRatio;
         this.companyLocation = companyLocation;
+        this.companySize = companySize;
     }
     
 }
