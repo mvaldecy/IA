@@ -13,7 +13,7 @@ public class App {
         expectedResult = scanner.nextDouble();
         System.out.println("Insira a quantidade de dados que deseja inserir:");
         size = scanner.nextInt();
-        for(int i = 0; i < size; i++){
+        for(int i = 0; i < size; i++){ // fazer for de for em dados
             Double randomWeight = 1 - Math.random()* 2; // gera um peso pseudo-aleatorio entre -1 e 1
             System.out.println("Insira o dado " + (i+1));
             inputs.add(scanner.nextDouble());

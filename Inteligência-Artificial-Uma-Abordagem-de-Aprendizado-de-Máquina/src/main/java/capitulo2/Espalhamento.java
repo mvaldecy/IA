@@ -1,4 +1,4 @@
-package Capitulo2;
+package capitulo2;
 
 
 

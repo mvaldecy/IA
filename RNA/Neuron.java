@@ -25,7 +25,7 @@ class Neuron {
 
 
     public Double in() {
-        Double result = 0.;
+        Double result = 0.0;
         for (int i = 0; i < weights.size(); i++) {
             result += weights.get(i) * inputs.get(i);
         }
