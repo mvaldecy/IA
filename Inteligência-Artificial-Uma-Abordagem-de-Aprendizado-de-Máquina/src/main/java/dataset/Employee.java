@@ -43,6 +43,10 @@ public class Employee {
         return this.salaryInUSD;
     }
 
+    public String getJobTitle() {
+        return this.jobTitle;
+    }
+
     public void printInfo() {
         System.out.printf("Work Year: %d", this.workYear);
     }
