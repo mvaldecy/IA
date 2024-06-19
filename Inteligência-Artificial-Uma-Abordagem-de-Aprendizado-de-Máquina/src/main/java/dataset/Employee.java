@@ -47,6 +47,10 @@ public class Employee {
         return this.jobTitle;
     }
 
+    public String getExperienceLevel() {
+        return this.experienceLevel;
+    }
+
     public void printInfo() {
         System.out.printf("Work Year: %d", this.workYear);
     }

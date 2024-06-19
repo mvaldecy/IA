@@ -14,20 +14,6 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
 
-/*
- *      int workYear,
-        String experienceLevel,
-        String employmentType,
-        String jobTitle,
-        Double salary,
-        String salaryCurrency,
-        Double salaryInUSD,
-        String employeeResidence,
-        Double remoteRatio,
-        String companyLocation,
-        String companySize
- */
-// salary_in_usd,employee_residence,remote_ratio,company_location,company_size
 public class Service {
     public static ArrayList<Employee> getData() {
         ArrayList<Employee> employees = new ArrayList<Employee>();
@@ -80,8 +66,14 @@ public class Service {
         return jobTitles;
     }
 
+    public static Set<String> getExperienceLevels() {
+        ArrayList<Employee> employees = getData();
+        Set<String> experienceLevels = new HashSet<String>(Arrays.asList(employees.stream().map((i) -> i.getExperienceLevel()).toArray(String[]::new)));
+        return experienceLevels;
+    }
+
     public static void main(String[] args) {
         ArrayList<Employee> employees = getData();
-        System.out.println(getJobTitles().size());
+        System.out.println(getExperienceLevels());
     }
 }

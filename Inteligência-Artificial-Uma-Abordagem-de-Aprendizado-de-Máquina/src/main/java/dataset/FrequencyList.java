@@ -5,7 +5,8 @@ import java.util.Arrays;
 import java.util.Collections;
 
 public class FrequencyList {
-    public static ArrayList<Frequency> getFrequencyList() {
+
+    public static ArrayList<Frequency> getFrequencyList() { // to do: deixar mais generica. // adcionar parametros firstDownLimit, LastupLimit, interval and data
         ArrayList<Employee> employees = Service.getData();
         ArrayList<Frequency> frequencyList = new ArrayList<Frequency>();
         Collections.sort(employees, (i, j) -> i.getSalary().compareTo(j.getSalary()));  //https://stackoverflow.com/questions/2784514/sort-arraylist-of-custom-objects-by-property
