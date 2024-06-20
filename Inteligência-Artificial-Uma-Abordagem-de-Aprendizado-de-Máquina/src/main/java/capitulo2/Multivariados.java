@@ -29,4 +29,20 @@ public class Multivariados {
         }
         return covarianciaMatrix;
     }
+
+    public static ArrayList<ArrayList<Double>> correlacaoMatrix(ArrayList<ArrayList<Double>> dataArray) {
+        int dataArraysize = dataArray.size();
+        ArrayList<ArrayList<Double>> correlacaoMatrix = new ArrayList<ArrayList<Double>>();
+        for (int i = 0; i < dataArraysize; i++) {
+            ArrayList<Double> matrixLine = new ArrayList<Double>();
+            for (int j = 0; j < dataArraysize; j++) {
+                Double corr_ij = covariancia(dataArray.get(i), dataArray.get(j)) / (Espalhamento.desvioPadrao(dataArray.get(i)) * Espalhamento.desvioPadrao(dataArray.get(j)));
+                matrixLine.add(corr_ij);
+            }
+            correlacaoMatrix.add(matrixLine);
+            
+        }
+        return correlacaoMatrix;
+    }
+
 }
