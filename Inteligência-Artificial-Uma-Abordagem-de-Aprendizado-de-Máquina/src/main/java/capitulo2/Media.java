@@ -2,10 +2,7 @@ package capitulo2;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Optional;
-
-import dataset.Employee;
 import dataset.Service;
 
 class Media {
